@@ -136,11 +136,13 @@ class UniverseEngine:
                 el.render(self.screen, self.width, self.height)
                 if el.destino:
                     destruir.append(el)
+                    print("destruir o %d por fusão e se tornar %d" % (el.id, el.destino_final().id))
                     if not el.destino_final() in acrescer:
                         acrescer.append(el.destino_final())
                 quad_dist2center = modulo_quad_vetor(delta_coord(el.posicao, [UniverseEngine.width/2, UniverseEngine.height/2, 0]))
 
                 if quad_dist2center >= ((UniverseEngine.width + UniverseEngine.height) * 4)**2:
+                    print("destruir o %d por fuga longínqua" % el.id)
                     destruir.append(el)
 
             # elementos novos e os mergeados colocados no mapa
