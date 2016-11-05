@@ -31,7 +31,7 @@ class UniverseEngine:
             posicao = (160 + 5 * x + random.uniform(-1, 1) * factor_x, 240 + random.uniform(-3, 3) * factor_y, 0)
             massa = random.uniform(500, 1000)
             #velocidade = (factor_x, factor_y, 0)
-            velocidade = (random.uniform(0.01, 10), random.uniform(0.01, 10), 0)
+            velocidade = (random.uniform(-10, 10), random.uniform(-10, 10), 0)
             asteroide = ElementoFisico(posicao=posicao, size=2, color=(133, 90, 133), velocidade=velocidade, massa=massa)
             self.elementos.append(asteroide)
 
