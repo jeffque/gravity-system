@@ -24,7 +24,7 @@ class UniverseEngine:
 
     def sistema(self):
         self.elementos.clear()
-        for x in range(0, 700):
+        for x in range(0, 50):
             factor_rand = random.uniform(0.01, 7)
             factor_x = random.uniform(x / 20 - factor_rand - 13, 13 + x / 20 * factor_rand)
             factor_y = random.uniform(x / 20 - factor_rand - 13, 13 + x / 20 * factor_rand)
