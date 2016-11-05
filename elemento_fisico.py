@@ -2,7 +2,10 @@ import pygame
 from  geometry import soma_coord, vetor_ponderado, norm_to_int
 
 class ElementoFisico:
+    id = 0
     def __init__(self, posicao, velocidade, massa=1, size=30, color=(255,255,255)):
+        ElementoFisico.id += 1
+        self.id = ElementoFisico.id
         self.posicao = [ordenada for ordenada in posicao]
         self.size = size
         self.color = color
