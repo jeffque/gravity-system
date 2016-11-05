@@ -138,6 +138,10 @@ class UniverseEngine:
                     destruir.append(el)
                     if not el.destino_final() in acrescer:
                         acrescer.append(el.destino_final())
+                quad_dist2center = modulo_quad_vetor(delta_coord(el.posicao, [UniverseEngine.width/2, UniverseEngine.height/2, 0]))
+
+                if quad_dist2center >= ((UniverseEngine.width + UniverseEngine.height) * 4)**2:
+                    destruir.append(el)
 
             # elementos novos e os mergeados colocados no mapa
             for destruto in destruir:
